@@ -1,0 +1,6 @@
+runtime: python39  # 使用 Python 3.9
+
+entrypoint: gunicorn -b :$PORT app:app  # 使用 Gunicorn 作為 WSGI 伺服器
+
+env_variables:
+  FLASK_ENV: production  # 設置為生產環境
